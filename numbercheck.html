@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ODD OR EVEN</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+      body{
+        background:linear-gradient(rgb(1, 159, 187) 15%, rgb(0, 103, 151) 25% );
+      }
+      .center{
+        margin-top: 100px;
+      }
+    </style>
+</head>
+<body>
+  <center class="container">
+    <div class="row mt-5 w-100">
+      <div class="bg-dark p-3 w-100 text-light rounded-3">
+        <h1>ODD or EVEN</h1>
+        <div class="center">
+          <input type="number" placeholder="Enter a number" id="userNumber" class="form-control mb-3 text-center">
+          <button onclick="checkNumber()" class="btn btn-primary w-50">check</button>
+          <div id="display" class="w-100 bg-light p-5 mt-4 text-center fs-2 fw-bold text-dark"></div>
+        </div>
+      </div>
+    </div>
+  </center>
+  <script>
+    function checkNumber(){
+      var Number1 = Number(userNumber.value);
+      if (Number1%2==0)
+      {
+        display.innerHTML = Number1 + " is even";
+      } else if (Number1%2!==0)
+      {
+        display.innerHTML = Number1 + " is odd";
+      } 
+    }
+  </script>
+</body>
+</html>
